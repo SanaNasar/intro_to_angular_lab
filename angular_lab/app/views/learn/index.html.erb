@@ -1,0 +1,19 @@
+<div ng-controller = "IndexCtrl" ng-style="{backgroundColor: favoriteColor}">
+
+<h2>Favorite Movies Index Page </h2>
+	
+ <!-- <div ng-style="{background: favoriteColor}"> -->
+ 	<input type = "text" ng-model = "favoriteColor" placeholder ="Enter your fav color" style = "width:300px;"> <br>
+ 	<!-- </div> -->
+
+	<h2> Here are my favorite movies</h2>
+	<ul ng-repeat = "movie in favoriteMovies | filter:search | orderBy: 'title' | limitTo: 3">
+	<br>
+	<li>
+		 <span>Title: {{movie.title }} </span><br>
+		 <span>Rating: {{movie.rating}}</span>
+	</li>
+</ul>
+
+</div>
+
