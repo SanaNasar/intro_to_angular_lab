@@ -30,15 +30,11 @@ TestApp.controller "IndexCtrl", [ '$scope', ($scope) ->
 		 		title: "Pursuit Of Hapinness"
 		 		rating: 5
 			}]
+]
+  # take a string, split it (turn it into an array), 
+  # call reverse() and then join the string back together
 
-	# $scope.reverse = ->
-	# .filter("reverse", function() {
-  # return function(items) {
-  #   return items.slice().reverse();
-  # };
-  # take a string, split it (turn it into an array), call reverse() and then join the string back together
-
-  TestApp.filter 'reverse', ->
+  TestApp.filter 'reverse',->
 	(item) ->
   item.split("").reverse().join().replace(/,/g, '')
-]
+
