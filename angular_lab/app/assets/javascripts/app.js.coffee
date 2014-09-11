@@ -32,11 +32,13 @@ TestApp.controller "IndexCtrl", [ '$scope', ($scope) ->
 			}]
 
 	# $scope.reverse = ->
-		# take a string, split it (turn it into an array), call reverse() and then join the string back together
-		
-		# $scope.favoriteMovies.slice.indexOf
-		# .filter("reverse", function() {
+	# .filter("reverse", function() {
   # return function(items) {
   #   return items.slice().reverse();
   # };
+  # take a string, split it (turn it into an array), call reverse() and then join the string back together
+
+  TestApp.filter 'reverse', ->
+	(item) ->
+  item.split("").reverse().join().replace(/,/g, '')
 ]
